@@ -14,11 +14,11 @@ class ATarget
 	public:
 		ATarget();
 		ATarget(ATarget const &other);
-		ATarget &operator=(ATarget const &other);
 		ATarget(std::string const &type);
+		ATarget &operator=(ATarget const &other);
 		virtual ~ATarget();
-		std::string const &getType() const;
 
-		virtual ATarget *clone() const = 0;
-		void getHitBySpell(ASpell const &spell) const;
+		std::string const getType() const;
+		virtual ATarget	*clone() const = 0;
+		void	getHitBySpell(ASpell const &spell) const;
 };

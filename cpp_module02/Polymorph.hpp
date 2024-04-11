@@ -10,5 +10,5 @@ class Polymorph : public ASpell
 		Polymorph();
 		~Polymorph();
 
-		ASpell *clone() const;
+		virtual ASpell	*clone() const;
 };

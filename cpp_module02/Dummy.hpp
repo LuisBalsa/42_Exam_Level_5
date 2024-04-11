@@ -10,5 +10,5 @@ class Dummy : public ATarget
 		Dummy();
 		~Dummy();
 
-		ATarget *clone() const;
+		virtual ATarget	*clone() const;
 };

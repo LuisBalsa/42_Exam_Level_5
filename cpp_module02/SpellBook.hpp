@@ -4,21 +4,19 @@
 #include <string>
 #include <map>
 #include "ASpell.hpp"
-#include "ATarget.hpp"
 
 class SpellBook
 {
 	private:
-		std::map<std::string, ASpell*> spells;
+		std::map<std::string, ASpell *> spells;
 
-		SpellBook(SpellBook const &other);
 		SpellBook &operator=(SpellBook const &other);
+		SpellBook(SpellBook const &other);
 
 	public:
 		SpellBook();
 		~SpellBook();
-
-		void learnSpell(ASpell const *spell);
-		void forgetSpell(std::string spell);
-		ASpell* createSpell(std::string const &spell);
+		void	learnSpell(ASpell *spell);
+		void	forgetSpell(std::string const &spell);
+		ASpell	*createSpell(std::string const &spell);
 };
