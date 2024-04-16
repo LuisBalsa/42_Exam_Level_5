@@ -58,9 +58,6 @@ void	Warlock::launchSpell(std::string const &spell, ATarget &target)
 {
 	ASpell *newspell = spells.createSpell(spell);
 	if (newspell)
-	{
 		newspell->launch(target);
-		delete (newspell);
-	}
 }
 

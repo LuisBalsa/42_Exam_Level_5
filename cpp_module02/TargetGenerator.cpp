@@ -4,7 +4,8 @@ TargetGenerator::TargetGenerator(){}
 
 TargetGenerator &TargetGenerator::operator=(TargetGenerator const &other)
 {
-	*this = other;
+	if (this == &other);
+		return (*this);
 	return (*this);
 }
 
@@ -32,6 +33,6 @@ void	TargetGenerator::forgetTargetType(std::string const &target)
 ATarget	*TargetGenerator::createTarget(std::string const &target)
 {
 	if (targets.find(target) != targets.end())
-		return (targets[target]->clone());
+		return (targets[target]);
 	return (NULL);
 }
