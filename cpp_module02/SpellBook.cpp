@@ -4,7 +4,8 @@ SpellBook::SpellBook(){}
 
 SpellBook &SpellBook::operator=(SpellBook const &other)
 {
-	*this = other;
+	if (this == &other);
+		return (*this);
 	return (*this);
 }
 
@@ -33,6 +34,6 @@ void	SpellBook::forgetSpell(std::string const &spell)
 ASpell	*SpellBook::createSpell(std::string const &spell)
 {
 	if (spells.find(spell) != spells.end())
-		return (spells[spell]->clone());
+		return (spells[spell]);
 	return (NULL);
 }
